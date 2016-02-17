@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     var slotTimer:NSTimer!
     let scaleSize:CGFloat = 1.81
     var isSpinning = false
+    var isDebug = true
     private var mLeverAudioPlayer:AVAudioPlayer!
     private var mSlotRunAudioPlayer:AVAudioPlayer!
     private var mEndAudioPlayer:AVAudioPlayer!
@@ -44,7 +45,14 @@ class ViewController: UIViewController {
         mLevelView.setImageData(levers)
         mLevelView.setLevelReleaseCallBack(pullLever)
         
-//        self.spinSlot()
+        if(isDebug){
+            let btn = UIButton(frame:CGRectMake(0, 0, 200, 80))
+            btn.addTarget(self, action: Selector("runSlot"), forControlEvents: UIControlEvents.TouchUpInside)
+            btn.setTitle("NEXT", forState: UIControlState.Normal)
+            btn.backgroundColor = UIColor.greenColor()
+            btn.setBackgroundImage(UIImage(named: "btn_pressed.png"), forState: UIControlState.Highlighted)
+            self.view.addSubview(btn)
+        }
     }
 
     override func didReceiveMemoryWarning() {
