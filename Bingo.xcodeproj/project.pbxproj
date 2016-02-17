@@ -1,0 +1,347 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A9892F9B1C72C89C008B61B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9892F9A1C72C89C008B61B9 /* AppDelegate.swift */; };
+		A9892F9D1C72C89C008B61B9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9892F9C1C72C89C008B61B9 /* ViewController.swift */; };
+		A9892FA01C72C89C008B61B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9892F9E1C72C89C008B61B9 /* Main.storyboard */; };
+		A9892FA21C72C89C008B61B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9892FA11C72C89C008B61B9 /* Assets.xcassets */; };
+		A9892FA51C72C89C008B61B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9892FA31C72C89C008B61B9 /* LaunchScreen.storyboard */; };
+		A9892FB41C72D160008B61B9 /* bingo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A9892FAD1C72D15F008B61B9 /* bingo.mp3 */; };
+		A9892FB51C72D160008B61B9 /* btn03.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A9892FAE1C72D15F008B61B9 /* btn03.mp3 */; };
+		A9892FB61C72D160008B61B9 /* failed.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A9892FAF1C72D160008B61B9 /* failed.mp3 */; };
+		A9892FB71C72D160008B61B9 /* lever.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A9892FB01C72D160008B61B9 /* lever.mp3 */; };
+		A9892FB81C72D160008B61B9 /* reach.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A9892FB11C72D160008B61B9 /* reach.mp3 */; };
+		A9892FB91C72D160008B61B9 /* runslot.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A9892FB21C72D160008B61B9 /* runslot.mp3 */; };
+		A9892FBA1C72D160008B61B9 /* slot_machine_sounds.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A9892FB31C72D160008B61B9 /* slot_machine_sounds.mp3 */; };
+		A9892FBD1C72D528008B61B9 /* Avatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9892FBC1C72D528008B61B9 /* Avatar.swift */; };
+		A9892FBF1C72D8CB008B61B9 /* GvLeverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9892FBE1C72D8CB008B61B9 /* GvLeverView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A9892F971C72C89C008B61B9 /* Bingo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bingo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9892F9A1C72C89C008B61B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A9892F9C1C72C89C008B61B9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A9892F9F1C72C89C008B61B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A9892FA11C72C89C008B61B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A9892FA41C72C89C008B61B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A9892FA61C72C89C008B61B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9892FAD1C72D15F008B61B9 /* bingo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bingo.mp3; sourceTree = "<group>"; };
+		A9892FAE1C72D15F008B61B9 /* btn03.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = btn03.mp3; sourceTree = "<group>"; };
+		A9892FAF1C72D160008B61B9 /* failed.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = failed.mp3; sourceTree = "<group>"; };
+		A9892FB01C72D160008B61B9 /* lever.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = lever.mp3; sourceTree = "<group>"; };
+		A9892FB11C72D160008B61B9 /* reach.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = reach.mp3; sourceTree = "<group>"; };
+		A9892FB21C72D160008B61B9 /* runslot.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = runslot.mp3; sourceTree = "<group>"; };
+		A9892FB31C72D160008B61B9 /* slot_machine_sounds.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = slot_machine_sounds.mp3; sourceTree = "<group>"; };
+		A9892FBC1C72D528008B61B9 /* Avatar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Avatar.swift; path = sound/Avatar.swift; sourceTree = "<group>"; };
+		A9892FBE1C72D8CB008B61B9 /* GvLeverView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GvLeverView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A9892F941C72C89C008B61B9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A9892F8E1C72C89C008B61B9 = {
+			isa = PBXGroup;
+			children = (
+				A9892F991C72C89C008B61B9 /* Bingo */,
+				A9892F981C72C89C008B61B9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A9892F981C72C89C008B61B9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A9892F971C72C89C008B61B9 /* Bingo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A9892F991C72C89C008B61B9 /* Bingo */ = {
+			isa = PBXGroup;
+			children = (
+				A9892FBB1C72D440008B61B9 /* avatar */,
+				A9892FAC1C72D151008B61B9 /* sound */,
+				A9892F9A1C72C89C008B61B9 /* AppDelegate.swift */,
+				A9892FBC1C72D528008B61B9 /* Avatar.swift */,
+				A9892FBE1C72D8CB008B61B9 /* GvLeverView.swift */,
+				A9892F9C1C72C89C008B61B9 /* ViewController.swift */,
+				A9892F9E1C72C89C008B61B9 /* Main.storyboard */,
+				A9892FA11C72C89C008B61B9 /* Assets.xcassets */,
+				A9892FA31C72C89C008B61B9 /* LaunchScreen.storyboard */,
+				A9892FA61C72C89C008B61B9 /* Info.plist */,
+			);
+			path = Bingo;
+			sourceTree = "<group>";
+		};
+		A9892FAC1C72D151008B61B9 /* sound */ = {
+			isa = PBXGroup;
+			children = (
+				A9892FAD1C72D15F008B61B9 /* bingo.mp3 */,
+				A9892FAE1C72D15F008B61B9 /* btn03.mp3 */,
+				A9892FAF1C72D160008B61B9 /* failed.mp3 */,
+				A9892FB01C72D160008B61B9 /* lever.mp3 */,
+				A9892FB11C72D160008B61B9 /* reach.mp3 */,
+				A9892FB21C72D160008B61B9 /* runslot.mp3 */,
+				A9892FB31C72D160008B61B9 /* slot_machine_sounds.mp3 */,
+			);
+			path = sound;
+			sourceTree = "<group>";
+		};
+		A9892FBB1C72D440008B61B9 /* avatar */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = avatar;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A9892F961C72C89C008B61B9 /* Bingo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A9892FA91C72C89C008B61B9 /* Build configuration list for PBXNativeTarget "Bingo" */;
+			buildPhases = (
+				A9892F931C72C89C008B61B9 /* Sources */,
+				A9892F941C72C89C008B61B9 /* Frameworks */,
+				A9892F951C72C89C008B61B9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Bingo;
+			productName = Bingo;
+			productReference = A9892F971C72C89C008B61B9 /* Bingo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A9892F8F1C72C89C008B61B9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "GUMI-QUANG";
+				TargetAttributes = {
+					A9892F961C72C89C008B61B9 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = A9892F921C72C89C008B61B9 /* Build configuration list for PBXProject "Bingo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A9892F8E1C72C89C008B61B9;
+			productRefGroup = A9892F981C72C89C008B61B9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A9892F961C72C89C008B61B9 /* Bingo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A9892F951C72C89C008B61B9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9892FA51C72C89C008B61B9 /* LaunchScreen.storyboard in Resources */,
+				A9892FB51C72D160008B61B9 /* btn03.mp3 in Resources */,
+				A9892FBA1C72D160008B61B9 /* slot_machine_sounds.mp3 in Resources */,
+				A9892FB81C72D160008B61B9 /* reach.mp3 in Resources */,
+				A9892FA21C72C89C008B61B9 /* Assets.xcassets in Resources */,
+				A9892FB71C72D160008B61B9 /* lever.mp3 in Resources */,
+				A9892FB41C72D160008B61B9 /* bingo.mp3 in Resources */,
+				A9892FA01C72C89C008B61B9 /* Main.storyboard in Resources */,
+				A9892FB61C72D160008B61B9 /* failed.mp3 in Resources */,
+				A9892FB91C72D160008B61B9 /* runslot.mp3 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A9892F931C72C89C008B61B9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9892FBD1C72D528008B61B9 /* Avatar.swift in Sources */,
+				A9892F9D1C72C89C008B61B9 /* ViewController.swift in Sources */,
+				A9892FBF1C72D8CB008B61B9 /* GvLeverView.swift in Sources */,
+				A9892F9B1C72C89C008B61B9 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A9892F9E1C72C89C008B61B9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A9892F9F1C72C89C008B61B9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A9892FA31C72C89C008B61B9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A9892FA41C72C89C008B61B9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A9892FA71C72C89C008B61B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		A9892FA81C72C89C008B61B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A9892FAA1C72C89C008B61B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Bingo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gumiviet.Bingo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A9892FAB1C72C89C008B61B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Bingo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gumiviet.Bingo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A9892F921C72C89C008B61B9 /* Build configuration list for PBXProject "Bingo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9892FA71C72C89C008B61B9 /* Debug */,
+				A9892FA81C72C89C008B61B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A9892FA91C72C89C008B61B9 /* Build configuration list for PBXNativeTarget "Bingo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9892FAA1C72C89C008B61B9 /* Debug */,
+				A9892FAB1C72C89C008B61B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A9892F8F1C72C89C008B61B9 /* Project object */;
+}
