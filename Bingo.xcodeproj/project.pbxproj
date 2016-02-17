@@ -21,6 +21,8 @@
 		A9892FBA1C72D160008B61B9 /* slot_machine_sounds.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A9892FB31C72D160008B61B9 /* slot_machine_sounds.mp3 */; };
 		A9892FBD1C72D528008B61B9 /* Avatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9892FBC1C72D528008B61B9 /* Avatar.swift */; };
 		A9892FBF1C72D8CB008B61B9 /* GvLeverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9892FBE1C72D8CB008B61B9 /* GvLeverView.swift */; };
+		A9D51CFC1C7409800014F087 /* GvCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D51CFA1C7409800014F087 /* GvCommon.swift */; };
+		A9D51CFD1C7409800014F087 /* PropertyListHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D51CFB1C7409800014F087 /* PropertyListHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		A9892FB31C72D160008B61B9 /* slot_machine_sounds.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = slot_machine_sounds.mp3; sourceTree = "<group>"; };
 		A9892FBC1C72D528008B61B9 /* Avatar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Avatar.swift; path = sound/Avatar.swift; sourceTree = "<group>"; };
 		A9892FBE1C72D8CB008B61B9 /* GvLeverView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GvLeverView.swift; sourceTree = "<group>"; };
+		A9D51CFA1C7409800014F087 /* GvCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GvCommon.swift; sourceTree = "<group>"; };
+		A9D51CFB1C7409800014F087 /* PropertyListHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertyListHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +80,8 @@
 				A9892FAC1C72D151008B61B9 /* sound */,
 				A9892F9A1C72C89C008B61B9 /* AppDelegate.swift */,
 				A9892FBC1C72D528008B61B9 /* Avatar.swift */,
+				A9D51CFA1C7409800014F087 /* GvCommon.swift */,
+				A9D51CFB1C7409800014F087 /* PropertyListHelper.swift */,
 				A9892FBE1C72D8CB008B61B9 /* GvLeverView.swift */,
 				A9892F9C1C72C89C008B61B9 /* ViewController.swift */,
 				A9892F9E1C72C89C008B61B9 /* Main.storyboard */,
@@ -187,6 +193,8 @@
 			files = (
 				A9892FBD1C72D528008B61B9 /* Avatar.swift in Sources */,
 				A9892F9D1C72C89C008B61B9 /* ViewController.swift in Sources */,
+				A9D51CFD1C7409800014F087 /* PropertyListHelper.swift in Sources */,
+				A9D51CFC1C7409800014F087 /* GvCommon.swift in Sources */,
 				A9892FBF1C72D8CB008B61B9 /* GvLeverView.swift in Sources */,
 				A9892F9B1C72C89C008B61B9 /* AppDelegate.swift in Sources */,
 			);
@@ -340,6 +348,7 @@
 				A9892FAB1C72C89C008B61B9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

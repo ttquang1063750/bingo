@@ -27,7 +27,7 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="A5c-GL-dzb"/>
                                 </connections>
                             </pickerView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="img_lever_01" translatesAutoresizingMaskIntoConstraints="NO" id="QgW-ig-GNf">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lever1" translatesAutoresizingMaskIntoConstraints="NO" id="QgW-ig-GNf" customClass="GvLeverView" customModule="Bingo" customModuleProvider="target">
                                 <rect key="frame" x="889" y="144" width="130" height="544"/>
                             </imageView>
                         </subviews>
@@ -48,6 +48,6 @@
     </scenes>
     <resources>
         <image name="bg" width="889" height="768"/>
-        <image name="img_lever_01" width="128" height="540"/>
+        <image name="lever1" width="128" height="540"/>
     </resources>
 </document>
