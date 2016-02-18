@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     
     
     var avatars = Avatar()
-    var currentSlot = -1
+    var currentSlot = 0
     var slotTimer:NSTimer!
     let scaleSize:CGFloat = 1.81
     var isSpinning = false
