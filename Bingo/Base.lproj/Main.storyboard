@@ -19,6 +19,7 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="UbJ-n4-plZ">
                                 <rect key="frame" x="0.0" y="0.0" width="890" height="768"/>
+                                <gestureRecognizers/>
                             </imageView>
                             <pickerView userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uLA-cq-z5F">
                                 <rect key="frame" x="89" y="292" width="700" height="216"/>
@@ -30,6 +31,13 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lever1" translatesAutoresizingMaskIntoConstraints="NO" id="QgW-ig-GNf" customClass="GvLeverView" customModule="Bingo" customModuleProvider="target">
                                 <rect key="frame" x="889" y="144" width="130" height="544"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cVO-sR-gOp">
+                                <rect key="frame" x="236" y="46" width="408" height="178"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="j0i-5a-KMY" appends="YES" id="Jkz-bH-csx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -42,8 +50,13 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="j0i-5a-KMY">
+                    <connections>
+                        <action selector="toggleDebugBtn:" destination="BYZ-38-t0r" id="eCj-xH-Gl1"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="531.25" y="429.4921875"/>
+            <point key="canvasLocation" x="531" y="429"/>
         </scene>
     </scenes>
     <resources>

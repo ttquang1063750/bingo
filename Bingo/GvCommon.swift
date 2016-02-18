@@ -161,7 +161,9 @@ extension Array
         var list = self
         for i in 0..<(list.count - 1) {
             let j = Int(arc4random_uniform(UInt32(list.count - i))) + i
-            swap(&list[i], &list[j])
+            if i != j{
+                swap(&list[i], &list[j])
+            }
         }
         return list
     }

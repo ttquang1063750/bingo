@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     var slotTimer:NSTimer!
     let scaleSize:CGFloat = 1.81
     var isSpinning = false
-    var isDebug = true
+    var btn:UIButton!
     private var mLeverAudioPlayer:AVAudioPlayer!
     private var mSlotRunAudioPlayer:AVAudioPlayer!
     private var mEndAudioPlayer:AVAudioPlayer!
@@ -45,13 +45,20 @@ class ViewController: UIViewController {
         mLevelView.setImageData(levers)
         mLevelView.setLevelReleaseCallBack(pullLever)
         
-        if(isDebug){
-            let btn = UIButton(frame:CGRectMake(0, 0, 200, 80))
-            btn.addTarget(self, action: Selector("runSlot"), forControlEvents: UIControlEvents.TouchUpInside)
-            btn.setTitle("NEXT", forState: UIControlState.Normal)
-            btn.backgroundColor = UIColor.greenColor()
-            btn.setBackgroundImage(UIImage(named: "btn_pressed.png"), forState: UIControlState.Highlighted)
-            self.view.addSubview(btn)
+        btn = UIButton(frame:CGRectMake(0, 0, 200, 80))
+        btn.addTarget(self, action: Selector("runSlot"), forControlEvents: UIControlEvents.TouchUpInside)
+        btn.setTitle("NEXT SLOT", forState: UIControlState.Normal)
+        btn.backgroundColor = UIColor.greenColor()
+        btn.setBackgroundImage(UIImage(named: "btn_pressed.png"), forState: UIControlState.Highlighted)
+        btn.hidden = true
+        self.view.addSubview(btn)
+    }
+    
+    
+    
+    @IBAction func toggleDebugBtn(sender: UILongPressGestureRecognizer) {
+        if(sender.state == UIGestureRecognizerState.Began){
+            btn.hidden = !btn.hidden
         }
     }
 
