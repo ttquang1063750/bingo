@@ -10,11 +10,13 @@ import UIKit
 import AVFoundation
 
 class ViewController: UIViewController {
-    @IBOutlet weak var mPickerView: UIPickerView!
     @IBOutlet weak var mLevelView: GvLeverView!
-    
+    @IBOutlet weak var slotIcon01: UIImageView!
+    @IBOutlet weak var slotIcon02: UIImageView!
+     @IBOutlet weak var slotNumber: UIImageView!
     
     var avatars = Avatar()
+    
     var currentSlot = 0
     var slotTimer:NSTimer!
     let scaleSize:CGFloat = 1.81
@@ -26,13 +28,6 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
-        let t0 = CGAffineTransformMakeTranslation(0, mPickerView.bounds.size.height*scaleSize)
-        let s0 = CGAffineTransformMakeScale(1.0, scaleSize)
-        let t1 = CGAffineTransformMakeTranslation (0, -mPickerView.bounds.size.height*scaleSize - 229)
-        mPickerView.transform = CGAffineTransformConcat(t0, CGAffineTransformConcat(s0, t1))
-        
         mEndAudioPlayer = try? AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("bingo", ofType: "mp3")!))
         mLeverAudioPlayer = try? AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("lever", ofType: "mp3")!))
         mSlotRunAudioPlayer = try? AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("slot_machine_sounds", ofType: "mp3")!))
@@ -52,6 +47,7 @@ class ViewController: UIViewController {
         btn.setBackgroundImage(UIImage(named: "btn_pressed.png"), forState: UIControlState.Highlighted)
         btn.hidden = true
         self.view.addSubview(btn)
+        self.runSlot()
     }
     
     
@@ -74,18 +70,15 @@ class ViewController: UIViewController {
             currentSlot = 0
         }
         
-        mPickerView.selectRow(currentSlot, inComponent: 0, animated: false)
-        mPickerView.selectRow(currentSlot, inComponent: 1, animated: false)
-        mPickerView.selectRow(currentSlot, inComponent: 2, animated: false)
+        var avatar = self.avatars.getElementAtIndex(index: currentSlot%self.avatars.getCountAvatar())
+        self.slotIcon01.image = UIImage(named: avatar["icon"]!)
+        self.slotIcon02.image = self.slotIcon01.image
+        self.slotNumber.image = UIImage(named: avatar["number"]!)
     }
     
-    func spinSlot(){
-       slotTimer =  NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("runSlot"), userInfo: nil, repeats: true)
-    }
     
-    func getSelectedAvatar(component:Int)->Dictionary<String, String>{
-        let row = self.mPickerView.selectedRowInComponent(component)
-        return self.avatars.getElementAtIndex(index: row%self.avatars.getCountAvatar())
+    func getSelectedAvatar()->Dictionary<String, String>{
+        return self.avatars.getElementAtIndex(index: currentSlot%self.avatars.getCountAvatar())
     }
     
     func pullLever(){
@@ -96,7 +89,7 @@ class ViewController: UIViewController {
                 doInBackground: { (params) -> [Dictionary<String, String>] in
                     var sleepInterval = 0.0001
                     var time = PropertyListHelper.sharedInstance.getSpeed(5.0)
-                    let cd = self.getSelectedAvatar(0)
+                    let cd = self.getSelectedAvatar()
                     while(time >= 0){
                         dispatch_async(dispatch_get_main_queue()){
                             self.runSlot()
@@ -129,48 +122,5 @@ class ViewController: UIViewController {
     }
     
 
-}
-
-extension ViewController: UIPickerViewDataSource{
-    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
-        return 3
-    }
-    
-    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return self.avatars.getCountAvatar()
-    }
-}
-
-extension ViewController: UIPickerViewDelegate{
-    func pickerView(pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
-        return 216
-    }
-    
-    
-    func pickerView(pickerView: UIPickerView, widthForComponent component: Int) -> CGFloat {
-        return 218
-    }
-    
-    
-    func pickerView(pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusingView view: UIView?) -> UIView {
-        var imageView:UIImageView
-        var avatar = self.avatars.getElementAtIndex(index: row%self.avatars.getCountAvatar())
-        if view == nil{
-            imageView = UIImageView(frame: CGRectMake(0, 0, 192, 240/scaleSize))
-        }else{
-            imageView = view as! UIImageView
-        }
-        
-        if component == 1 {
-            imageView.image = UIImage(named: avatar["number"]!)
-        } else {
-            imageView.image = UIImage(named: avatar["icon"]!)
-        }
-        (pickerView.subviews[1] ).hidden = true
-        (pickerView.subviews[2] ).hidden = true
-        pickerView.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0)
-        
-        return imageView
-    }
 }
 
