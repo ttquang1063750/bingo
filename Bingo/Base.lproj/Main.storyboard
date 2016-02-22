@@ -31,7 +31,7 @@
                                     <outletCollection property="gestureRecognizers" destination="j0i-5a-KMY" appends="YES" id="Jkz-bH-csx"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="363" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gVL-nP-LgN">
+                            <tableView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="363" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gVL-nP-LgN">
                                 <rect key="frame" x="123" y="292" width="639" height="391"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -42,14 +42,14 @@
                                             <rect key="frame" x="0.0" y="0.0" width="639" height="362"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SFG-IN-Ym4">
-                                                    <rect key="frame" x="-3" y="61" width="192" height="240"/>
-                                                </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lPc-o3-DQq">
-                                                    <rect key="frame" x="223" y="61" width="192" height="240"/>
+                                                    <rect key="frame" x="223" y="76" width="192" height="240"/>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="49K-dZ-4YI">
-                                                    <rect key="frame" x="443" y="61" width="192" height="240"/>
+                                                    <rect key="frame" x="447" y="76" width="192" height="240"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SFG-IN-Ym4">
+                                                    <rect key="frame" x="0.0" y="76" width="192" height="240"/>
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
