@@ -10,13 +10,12 @@ import UIKit
 import AVFoundation
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var mTableView: UITableView!
     @IBOutlet weak var mLevelView: GvLeverView!
-    @IBOutlet weak var slotIcon01: UIImageView!
-    @IBOutlet weak var slotIcon02: UIImageView!
-     @IBOutlet weak var slotNumber: UIImageView!
+    
     
     var avatars = Avatar()
-    
     var currentSlot = 0
     var slotTimer:NSTimer!
     let scaleSize:CGFloat = 1.81
@@ -47,7 +46,7 @@ class ViewController: UIViewController {
         btn.setBackgroundImage(UIImage(named: "btn_pressed.png"), forState: UIControlState.Highlighted)
         btn.hidden = true
         self.view.addSubview(btn)
-        self.runSlot()
+        mTableView.separatorStyle = UITableViewCellSeparatorStyle.None
     }
     
     
@@ -70,15 +69,17 @@ class ViewController: UIViewController {
             currentSlot = 0
         }
         
-        var avatar = self.avatars.getElementAtIndex(index: currentSlot%self.avatars.getCountAvatar())
-        self.slotIcon01.image = UIImage(named: avatar["icon"]!)
-        self.slotIcon02.image = self.slotIcon01.image
-        self.slotNumber.image = UIImage(named: avatar["number"]!)
+        let i = NSIndexPath(forRow: currentSlot, inSection: 0)
+        mTableView.selectRowAtIndexPath(i, animated: true, scrollPosition: UITableViewScrollPosition.Top)
     }
     
+    func spinSlot(){
+       slotTimer =  NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("runSlot"), userInfo: nil, repeats: true)
+    }
     
-    func getSelectedAvatar()->Dictionary<String, String>{
-        return self.avatars.getElementAtIndex(index: currentSlot%self.avatars.getCountAvatar())
+    func getSelectedAvatar(component:Int)->Dictionary<String, String>{
+        let row = self.mTableView.indexPathsForVisibleRows![0].row
+        return self.avatars.getElementAtIndex(index: row%self.avatars.getCountAvatar())
     }
     
     func pullLever(){
@@ -88,8 +89,8 @@ class ViewController: UIViewController {
             GvAsyncTask<Void,[Dictionary<String, String>]>(
                 doInBackground: { (params) -> [Dictionary<String, String>] in
                     var sleepInterval = 0.0001
-                    var time = PropertyListHelper.sharedInstance.getSpeed(5.0)
-                    let cd = self.getSelectedAvatar()
+                    var time = PropertyListHelper.sharedInstance.getSpeed(3.0)
+                    let cd = self.getSelectedAvatar(0)
                     while(time >= 0){
                         dispatch_async(dispatch_get_main_queue()){
                             self.runSlot()
@@ -122,5 +123,26 @@ class ViewController: UIViewController {
     }
     
 
+}
+
+extension ViewController: UITableViewDelegate, UITableViewDataSource{
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.avatars.getCountAvatar()
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("SlotCell", forIndexPath: indexPath) as! SlotCellTableViewCell
+        cell.backgroundColor = UIColor.clearColor()
+        cell.selectionStyle = UITableViewCellSelectionStyle.None
+        let avatar = self.avatars.getElementAtIndex(index: indexPath.row%self.avatars.getCountAvatar())
+        cell.slot01.image = UIImage(named: avatar["icon"]!)
+        cell.slot03.image = UIImage(named: avatar["icon"]!)
+        cell.slot02.image = UIImage(named: avatar["number"]!)
+        return cell
+    }
 }
 
