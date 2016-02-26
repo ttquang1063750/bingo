@@ -19,7 +19,7 @@ class PropertyListHelper {
         }
         return Static.instance!
     }
-    
+    private let TOTALITEM = 72
     private let KEY_ENABLE_SOUND = "KEY_ENABLE_SOUND"
     private let KEY_SPEED = "KEY_SPEED"
     
@@ -44,6 +44,10 @@ class PropertyListHelper {
             return defaultValue
         }
         return NSUserDefaults.standardUserDefaults().floatForKey(KEY_SPEED)
+    }
+    
+    func getTotalItem()->Int{
+        return TOTALITEM
     }
     
     func synchronize(){
