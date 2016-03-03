@@ -12,10 +12,9 @@ import AVFoundation
 class ViewController: UIViewController {
     
     @IBOutlet weak var mTableView: UITableView!
-    @IBOutlet weak var mLevelView: GvLeverView!
     
     var avatars = Avatar()
-    var  keepArray = Dictionary<String,Bool>()
+    var keepArray = Dictionary<String,Bool>()
     var counter = 0
     var gameOver = false
     var currentSlot = 0
@@ -35,13 +34,6 @@ class ViewController: UIViewController {
         mLeverAudioPlayer = try? AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("lever", ofType: "mp3")!))
         mSlotRunAudioPlayer = try? AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("slot_machine_sounds", ofType: "mp3")!))
         mSlotRunAudioPlayer.numberOfLoops = -1
-        var levers:[UIImage] = []
-        for i in 1...9{
-            let pathName = "lever\(i).png"
-            levers.append(UIImage(named: pathName)!)
-        }
-        mLevelView.setImageData(levers)
-        mLevelView.setLevelReleaseCallBack(pullLever)
         
         
         //Add btn select next row
@@ -139,8 +131,7 @@ class ViewController: UIViewController {
         return self.avatars.getElementAtIndex(index: row)
     }
     
-    func pullLever(){
-        
+    @IBAction func pullLever(sender: UIButton){
         if(self.avatars.getCountAvatar()>0 && !isSpinning && !gameOver){
             isSpinning = true
             GvAsyncTask<Void,[Dictionary<String, String>]>(
