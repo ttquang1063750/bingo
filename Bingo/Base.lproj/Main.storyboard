@@ -82,7 +82,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="j0i-5a-KMY">
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="3" id="j0i-5a-KMY">
                     <connections>
                         <action selector="toggleDebugBtn:" destination="BYZ-38-t0r" id="eCj-xH-Gl1"/>
                     </connections>
