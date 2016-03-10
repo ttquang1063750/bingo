@@ -12,10 +12,9 @@ import AVFoundation
 class ViewController: UIViewController {
     
     @IBOutlet weak var mTableView: UITableView!
-    @IBOutlet weak var mLevelView: GvLeverView!
     
     var avatars = Avatar()
-    var  keepArray = Dictionary<String,Bool>()
+    var keepArray = Dictionary<String,Bool>()
     var counter = 0
     var gameOver = false
     var currentSlot = 0
@@ -35,33 +34,27 @@ class ViewController: UIViewController {
         mLeverAudioPlayer = try? AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("lever", ofType: "mp3")!))
         mSlotRunAudioPlayer = try? AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("slot_machine_sounds", ofType: "mp3")!))
         mSlotRunAudioPlayer.numberOfLoops = -1
-        var levers:[UIImage] = []
-        for i in 1...9{
-            let pathName = "lever\(i).png"
-            levers.append(UIImage(named: pathName)!)
-        }
-        mLevelView.setImageData(levers)
-        mLevelView.setLevelReleaseCallBack(pullLever)
         
-        
+        var y:CGFloat = 0.0
         //Add btn select next row
-        btn = UIButton(frame:CGRectMake(0, 0, 200, 80))
-        btn.addTarget(self, action: Selector("runSlot"), forControlEvents: UIControlEvents.TouchUpInside)
-        btn.setTitle("NEXT SLOT", forState: UIControlState.Normal)
-        btn.backgroundColor = UIColor.greenColor()
-        btn.setBackgroundImage(UIImage(named: "btn_pressed.png"), forState: UIControlState.Highlighted)
-        btn.hidden = true
-        
+//        btn = UIButton(frame:CGRectMake(0, y, 200, 80))
+//        btn.addTarget(self, action: Selector("runSlot"), forControlEvents: UIControlEvents.TouchUpInside)
+//        btn.setTitle("NEXT SLOT", forState: UIControlState.Normal)
+//        btn.backgroundColor = UIColor.greenColor()
+//        btn.setBackgroundImage(UIImage(named: "btn_pressed.png"), forState: UIControlState.Highlighted)
+//        btn.hidden = true
+//        y += 90
+      
         
         //Add btn reset
-        resetButton = UIButton(frame:CGRectMake(0, 90, 200, 80))
+        resetButton = UIButton(frame:CGRectMake(0, y, 200, 80))
         resetButton.addTarget(self, action: Selector("resetSlot"), forControlEvents: UIControlEvents.TouchUpInside)
         resetButton.setTitle("RESET NOW", forState: UIControlState.Normal)
         resetButton.backgroundColor = UIColor.greenColor()
         resetButton.setBackgroundImage(UIImage(named: "btn_pressed.png"), forState: UIControlState.Highlighted)
         resetButton.hidden = true
         
-        self.view.addSubview(btn)
+//        self.view.addSubview(btn)
         self.view.addSubview(resetButton)
         
         
@@ -72,7 +65,7 @@ class ViewController: UIViewController {
     
     @IBAction func toggleDebugBtn(sender: UILongPressGestureRecognizer) {
         if(sender.state == UIGestureRecognizerState.Began){
-            btn.hidden = !btn.hidden
+//            btn.hidden = !btn.hidden
             resetButton.hidden = !resetButton.hidden
         }
     }
@@ -139,8 +132,7 @@ class ViewController: UIViewController {
         return self.avatars.getElementAtIndex(index: row)
     }
     
-    func pullLever(){
-        
+    @IBAction func pullLever(sender: UIButton){
         if(self.avatars.getCountAvatar()>0 && !isSpinning && !gameOver){
             isSpinning = true
             GvAsyncTask<Void,[Dictionary<String, String>]>(
