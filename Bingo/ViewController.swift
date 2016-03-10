@@ -35,25 +35,26 @@ class ViewController: UIViewController {
         mSlotRunAudioPlayer = try? AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("slot_machine_sounds", ofType: "mp3")!))
         mSlotRunAudioPlayer.numberOfLoops = -1
         
-        
+        var y:CGFloat = 0.0
         //Add btn select next row
-        btn = UIButton(frame:CGRectMake(0, 0, 200, 80))
-        btn.addTarget(self, action: Selector("runSlot"), forControlEvents: UIControlEvents.TouchUpInside)
-        btn.setTitle("NEXT SLOT", forState: UIControlState.Normal)
-        btn.backgroundColor = UIColor.greenColor()
-        btn.setBackgroundImage(UIImage(named: "btn_pressed.png"), forState: UIControlState.Highlighted)
-        btn.hidden = true
-        
+//        btn = UIButton(frame:CGRectMake(0, y, 200, 80))
+//        btn.addTarget(self, action: Selector("runSlot"), forControlEvents: UIControlEvents.TouchUpInside)
+//        btn.setTitle("NEXT SLOT", forState: UIControlState.Normal)
+//        btn.backgroundColor = UIColor.greenColor()
+//        btn.setBackgroundImage(UIImage(named: "btn_pressed.png"), forState: UIControlState.Highlighted)
+//        btn.hidden = true
+//        y += 90
+      
         
         //Add btn reset
-        resetButton = UIButton(frame:CGRectMake(0, 90, 200, 80))
+        resetButton = UIButton(frame:CGRectMake(0, y, 200, 80))
         resetButton.addTarget(self, action: Selector("resetSlot"), forControlEvents: UIControlEvents.TouchUpInside)
         resetButton.setTitle("RESET NOW", forState: UIControlState.Normal)
         resetButton.backgroundColor = UIColor.greenColor()
         resetButton.setBackgroundImage(UIImage(named: "btn_pressed.png"), forState: UIControlState.Highlighted)
         resetButton.hidden = true
         
-        self.view.addSubview(btn)
+//        self.view.addSubview(btn)
         self.view.addSubview(resetButton)
         
         
@@ -64,7 +65,7 @@ class ViewController: UIViewController {
     
     @IBAction func toggleDebugBtn(sender: UILongPressGestureRecognizer) {
         if(sender.state == UIGestureRecognizerState.Began){
-            btn.hidden = !btn.hidden
+//            btn.hidden = !btn.hidden
             resetButton.hidden = !resetButton.hidden
         }
     }
