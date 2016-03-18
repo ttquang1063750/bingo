@@ -12,6 +12,7 @@ import AVFoundation
 class ViewController: UIViewController {
     
     @IBOutlet weak var mTableView: UITableView!
+    @IBOutlet weak var slotView: UIView!
     
     var avatars = Avatar()
     var keepArray = Dictionary<String,Bool>()
@@ -35,7 +36,7 @@ class ViewController: UIViewController {
         mSlotRunAudioPlayer = try? AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("slot_machine_sounds", ofType: "mp3")!))
         mSlotRunAudioPlayer.numberOfLoops = -1
         
-        var y:CGFloat = 0.0
+        let y:CGFloat = 0.0
         //Add btn select next row
 //        btn = UIButton(frame:CGRectMake(0, y, 200, 80))
 //        btn.addTarget(self, action: Selector("runSlot"), forControlEvents: UIControlEvents.TouchUpInside)
@@ -53,7 +54,6 @@ class ViewController: UIViewController {
         resetButton.backgroundColor = UIColor.greenColor()
         resetButton.setBackgroundImage(UIImage(named: "btn_pressed.png"), forState: UIControlState.Highlighted)
         resetButton.hidden = true
-        
 //        self.view.addSubview(btn)
         self.view.addSubview(resetButton)
         
@@ -193,5 +193,18 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
         cell.slot02.image = UIImage(named: avatar["number"]!)
         return cell
     }
+}
+
+extension ViewController: LTInfiniteScrollViewDataSource{
+  func viewAtIndex(index: Int, reusingView view: UIView!) -> UIView! {
+    <#code#>
+  }
+  func numberOfViews() -> Int {
+    return self.avatars.getCountAvatar()
+  }
+  
+  func numberOfVisibleViews() -> Int {
+    return 1
+  }
 }
 
