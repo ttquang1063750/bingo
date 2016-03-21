@@ -35,21 +35,9 @@ class ViewController: UIViewController {
     mLeverAudioPlayer = try? AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("lever", ofType: "mp3")!))
     mSlotRunAudioPlayer = try? AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("slot_machine_sounds", ofType: "mp3")!))
     mSlotRunAudioPlayer.numberOfLoops = -1
-    
-    let y:CGFloat = 0.0
-    //Add btn select next row
-    //        btn = UIButton(frame:CGRectMake(0, y, 200, 80))
-    //        btn.addTarget(self, action: Selector("runSlot"), forControlEvents: UIControlEvents.TouchUpInside)
-    //        btn.setTitle("NEXT SLOT", forState: UIControlState.Normal)
-    //        btn.backgroundColor = UIColor.greenColor()
-    //        btn.setBackgroundImage(UIImage(named: "btn_pressed.png"), forState: UIControlState.Highlighted)
-    //        btn.hidden = true
-    //        y += 90
-    //        self.view.addSubview(btn)
-    
-    
+
     //Add btn reset
-    resetButton = UIButton(frame:CGRectMake(0, y, 200, 80))
+    resetButton = UIButton(frame:CGRectMake(0, 0, 200, 80))
     resetButton.addTarget(self, action: Selector("resetSlot"), forControlEvents: UIControlEvents.TouchUpInside)
     resetButton.setTitle("RESET NOW", forState: UIControlState.Normal)
     resetButton.backgroundColor = UIColor.greenColor()
@@ -72,10 +60,9 @@ class ViewController: UIViewController {
   }
   
   
-  
   @IBAction func toggleDebugBtn(sender: UILongPressGestureRecognizer) {
     if(sender.state == UIGestureRecognizerState.Began){
-      //            btn.hidden = !btn.hidden
+      self.scrollView.userInteractionEnabled = resetButton.hidden
       resetButton.hidden = !resetButton.hidden
     }
   }
@@ -147,8 +134,6 @@ class ViewController: UIViewController {
       }
     }
   }
-  
-  
 }
 
 extension ViewController: LTInfiniteScrollViewDataSource, LTInfiniteScrollViewDelegate{
@@ -177,12 +162,5 @@ extension ViewController: LTInfiniteScrollViewDataSource, LTInfiniteScrollViewDe
   func numberOfVisibleViews() -> Int {
     return 1
   }
-  
-//  func updateView(view: UIView!, withProgress progress: CGFloat, scrollDirection direction: ScrollDirection) {
-//    if(self.isSpinning){
-//      self.runSlot()
-//    }
-//  }
-  
 }
 
