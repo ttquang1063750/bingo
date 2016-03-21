@@ -24,6 +24,7 @@ class ViewController: UIViewController {
   var isSpinning = false
   var btn:UIButton!
   var resetButton:UIButton!
+  var lastSlot = 0
   private var mLeverAudioPlayer:AVAudioPlayer!
   private var mSlotRunAudioPlayer:AVAudioPlayer!
   private var mEndAudioPlayer:AVAudioPlayer!
@@ -92,6 +93,7 @@ class ViewController: UIViewController {
         currentSlot = 0
         self.scrollView.scrollToIndex(currentSlot, animated: false)
       }
+    lastSlot = currentSlot
   }
   
   func nextSlot()->Int{
@@ -103,17 +105,21 @@ class ViewController: UIViewController {
     return currentSlot
   }
   
-  func setRow(c:Int){
+  func findVisibleSlot(c:Int){
     let lastAvatar = self.avatars.getElementAtIndex(index: c)
     if (keepArray.boolForKey(lastAvatar["index"]!) == true && gameOver == false){
-      setRow(nextSlot())
+      findVisibleSlot(nextSlot())
+      return
     }else{
       keepArray.updateValue(true, forKey: lastAvatar["index"]!)
-      self.scrollView.scrollToIndex(currentSlot, animated: true)
       ++counter
+      if(lastSlot != currentSlot){
+        self.scrollView.scrollToIndex(currentSlot, animated: false)
+      }
       if(counter == PropertyListHelper.sharedInstance.getTotalItem()){
         gameOver = true
       }
+      return
     }
   }
   
@@ -127,7 +133,7 @@ class ViewController: UIViewController {
       let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(3 * Double(NSEC_PER_SEC)))
       dispatch_after(delayTime, dispatch_get_main_queue()) {
         timer.invalidate()
-        self.setRow(self.currentSlot)
+        self.findVisibleSlot(self.currentSlot)
         self.isSpinning = false
         self.mSlotRunAudioPlayer.stop()
         self.mEndAudioPlayer.playSound()

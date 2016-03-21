@@ -55,20 +55,10 @@ import UIKit
   
   
   func setUp(){
-    view = loadViewFromNib()
+    view = NSBundle.mainBundle().loadNibNamed("SlotView", owner: self, options: nil).first as! UIView
     view.frame = bounds
     view.autoresizingMask = [.FlexibleWidth,.FlexibleHeight]
     addSubview(view)
-  }
-  
-  func loadViewFromNib()->UIView{
-//    let bundle = NSBundle(forClass: self.dynamicType)
-//    let nib = UINib(nibName: "SlotView", bundle: bundle)
-//    let v = nib.instantiateWithOwner(nil, options: nil)
-//    NSLog("\(v)")
-//    return v[0] as! UIView
-    
-    return NSBundle.mainBundle().loadNibNamed("SlotView", owner: self, options: nil).first as! UIView
   }
 
 }
