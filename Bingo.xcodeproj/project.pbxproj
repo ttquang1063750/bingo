@@ -21,8 +21,6 @@
 		A9892FB91C72D160008B61B9 /* runslot.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A9892FB21C72D160008B61B9 /* runslot.mp3 */; };
 		A9892FBA1C72D160008B61B9 /* slot_machine_sounds.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A9892FB31C72D160008B61B9 /* slot_machine_sounds.mp3 */; };
 		A9892FBD1C72D528008B61B9 /* Avatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9892FBC1C72D528008B61B9 /* Avatar.swift */; };
-		A9892FBF1C72D8CB008B61B9 /* GvLeverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9892FBE1C72D8CB008B61B9 /* GvLeverView.swift */; };
-		A99DFDC11C7AC47E007D7D4A /* SlotCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99DFDC01C7AC47E007D7D4A /* SlotCellTableViewCell.swift */; };
 		A9D51CFC1C7409800014F087 /* GvCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D51CFA1C7409800014F087 /* GvCommon.swift */; };
 		A9D51CFD1C7409800014F087 /* PropertyListHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D51CFB1C7409800014F087 /* PropertyListHelper.swift */; };
 		EDCB90271C9E3C5200750E23 /* SlotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCB90261C9E3C5200750E23 /* SlotView.swift */; };
@@ -48,8 +46,6 @@
 		A9892FB21C72D160008B61B9 /* runslot.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = runslot.mp3; sourceTree = "<group>"; };
 		A9892FB31C72D160008B61B9 /* slot_machine_sounds.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = slot_machine_sounds.mp3; sourceTree = "<group>"; };
 		A9892FBC1C72D528008B61B9 /* Avatar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Avatar.swift; path = sound/Avatar.swift; sourceTree = "<group>"; };
-		A9892FBE1C72D8CB008B61B9 /* GvLeverView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GvLeverView.swift; sourceTree = "<group>"; };
-		A99DFDC01C7AC47E007D7D4A /* SlotCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlotCellTableViewCell.swift; sourceTree = "<group>"; };
 		A9D51CFA1C7409800014F087 /* GvCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GvCommon.swift; sourceTree = "<group>"; };
 		A9D51CFB1C7409800014F087 /* PropertyListHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertyListHelper.swift; sourceTree = "<group>"; };
 		EDCB90261C9E3C5200750E23 /* SlotView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlotView.swift; sourceTree = "<group>"; };
@@ -94,8 +90,6 @@
 				A9892FBC1C72D528008B61B9 /* Avatar.swift */,
 				A9D51CFA1C7409800014F087 /* GvCommon.swift */,
 				A9D51CFB1C7409800014F087 /* PropertyListHelper.swift */,
-				A99DFDC01C7AC47E007D7D4A /* SlotCellTableViewCell.swift */,
-				A9892FBE1C72D8CB008B61B9 /* GvLeverView.swift */,
 				A9892F9C1C72C89C008B61B9 /* ViewController.swift */,
 				A9892F9E1C72C89C008B61B9 /* Main.storyboard */,
 				A9892FA11C72C89C008B61B9 /* Assets.xcassets */,
@@ -212,10 +206,8 @@
 				A9892FBD1C72D528008B61B9 /* Avatar.swift in Sources */,
 				A9740A201C9C137500D9CC56 /* LTInfiniteScrollView.m in Sources */,
 				A9892F9D1C72C89C008B61B9 /* ViewController.swift in Sources */,
-				A99DFDC11C7AC47E007D7D4A /* SlotCellTableViewCell.swift in Sources */,
 				A9D51CFD1C7409800014F087 /* PropertyListHelper.swift in Sources */,
 				A9D51CFC1C7409800014F087 /* GvCommon.swift in Sources */,
-				A9892FBF1C72D8CB008B61B9 /* GvLeverView.swift in Sources */,
 				A9892F9B1C72C89C008B61B9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
