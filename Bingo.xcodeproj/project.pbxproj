@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A9740A201C9C137500D9CC56 /* LTInfiniteScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = A9740A1F1C9C137500D9CC56 /* LTInfiniteScrollView.m */; };
 		A9892F9B1C72C89C008B61B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9892F9A1C72C89C008B61B9 /* AppDelegate.swift */; };
 		A9892F9D1C72C89C008B61B9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9892F9C1C72C89C008B61B9 /* ViewController.swift */; };
 		A9892FA01C72C89C008B61B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9892F9E1C72C89C008B61B9 /* Main.storyboard */; };
@@ -24,9 +25,14 @@
 		A99DFDC11C7AC47E007D7D4A /* SlotCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99DFDC01C7AC47E007D7D4A /* SlotCellTableViewCell.swift */; };
 		A9D51CFC1C7409800014F087 /* GvCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D51CFA1C7409800014F087 /* GvCommon.swift */; };
 		A9D51CFD1C7409800014F087 /* PropertyListHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D51CFB1C7409800014F087 /* PropertyListHelper.swift */; };
+		EDCB90271C9E3C5200750E23 /* SlotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCB90261C9E3C5200750E23 /* SlotView.swift */; };
+		EDCB90291C9E461A00750E23 /* SlotView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDCB90281C9E461A00750E23 /* SlotView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A9740A1D1C9C137400D9CC56 /* Bingo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bingo-Bridging-Header.h"; sourceTree = "<group>"; };
+		A9740A1E1C9C137500D9CC56 /* LTInfiniteScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTInfiniteScrollView.h; sourceTree = "<group>"; };
+		A9740A1F1C9C137500D9CC56 /* LTInfiniteScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTInfiniteScrollView.m; sourceTree = "<group>"; };
 		A9892F971C72C89C008B61B9 /* Bingo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bingo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9892F9A1C72C89C008B61B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A9892F9C1C72C89C008B61B9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -46,6 +52,8 @@
 		A99DFDC01C7AC47E007D7D4A /* SlotCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlotCellTableViewCell.swift; sourceTree = "<group>"; };
 		A9D51CFA1C7409800014F087 /* GvCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GvCommon.swift; sourceTree = "<group>"; };
 		A9D51CFB1C7409800014F087 /* PropertyListHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertyListHelper.swift; sourceTree = "<group>"; };
+		EDCB90261C9E3C5200750E23 /* SlotView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlotView.swift; sourceTree = "<group>"; };
+		EDCB90281C9E461A00750E23 /* SlotView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SlotView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +86,8 @@
 		A9892F991C72C89C008B61B9 /* Bingo */ = {
 			isa = PBXGroup;
 			children = (
+				A9740A1E1C9C137500D9CC56 /* LTInfiniteScrollView.h */,
+				A9740A1F1C9C137500D9CC56 /* LTInfiniteScrollView.m */,
 				A9892FBB1C72D440008B61B9 /* avatar */,
 				A9892FAC1C72D151008B61B9 /* sound */,
 				A9892F9A1C72C89C008B61B9 /* AppDelegate.swift */,
@@ -91,6 +101,9 @@
 				A9892FA11C72C89C008B61B9 /* Assets.xcassets */,
 				A9892FA31C72C89C008B61B9 /* LaunchScreen.storyboard */,
 				A9892FA61C72C89C008B61B9 /* Info.plist */,
+				A9740A1D1C9C137400D9CC56 /* Bingo-Bridging-Header.h */,
+				EDCB90261C9E3C5200750E23 /* SlotView.swift */,
+				EDCB90281C9E461A00750E23 /* SlotView.xib */,
 			);
 			path = Bingo;
 			sourceTree = "<group>";
@@ -174,6 +187,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDCB90291C9E461A00750E23 /* SlotView.xib in Resources */,
 				A9892FA51C72C89C008B61B9 /* LaunchScreen.storyboard in Resources */,
 				A9892FB51C72D160008B61B9 /* btn03.mp3 in Resources */,
 				A9892FBA1C72D160008B61B9 /* slot_machine_sounds.mp3 in Resources */,
@@ -194,7 +208,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDCB90271C9E3C5200750E23 /* SlotView.swift in Sources */,
 				A9892FBD1C72D528008B61B9 /* Avatar.swift in Sources */,
+				A9740A201C9C137500D9CC56 /* LTInfiniteScrollView.m in Sources */,
 				A9892F9D1C72C89C008B61B9 /* ViewController.swift in Sources */,
 				A99DFDC11C7AC47E007D7D4A /* SlotCellTableViewCell.swift in Sources */,
 				A9D51CFD1C7409800014F087 /* PropertyListHelper.swift in Sources */,
@@ -313,11 +329,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Bingo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gumiviet.Bingo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Bingo/Bingo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -325,11 +344,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Bingo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gumiviet.Bingo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Bingo/Bingo-Bridging-Header.h";
 			};
 			name = Release;
 		};

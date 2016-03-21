@@ -12,7 +12,7 @@ class Avatar: NSObject {
     private var totalItem = PropertyListHelper.sharedInstance.getTotalItem()
     override init() {
         super.init()
-        for i in 1...totalItem{
+        for i in 1...totalItem*500{
             let c = i%totalItem + 1
             var dic = Dictionary<String, String>()
             dic.updateValue("icon_\(c).png", forKey: "icon")
@@ -22,16 +22,6 @@ class Avatar: NSObject {
         }
         
         avatars = avatars.shuffled()
-        
-        //Add more two object cheat for tableview because we can not select row at the end
-        for i in 0...1{
-            let c = Int(arc4random_uniform(UInt32(totalItem - i - 1))) + 1
-            var dic = Dictionary<String, String>()
-            dic.updateValue("icon_\(c).png", forKey: "icon")
-            dic.updateValue("number_\(c).png", forKey: "number")
-            dic.updateValue("index_\(c)", forKey: "index")
-            avatars.append(dic)
-        }
     }
     
     func getCountAvatar() -> Int{
