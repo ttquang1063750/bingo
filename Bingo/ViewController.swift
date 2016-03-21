@@ -122,7 +122,7 @@ class ViewController: UIViewController {
       setRow(nextSlot())
     }else{
       keepArray.updateValue(true, forKey: lastAvatar["index"]!)
-      self.scrollView.scrollToIndex(currentSlot, animated: false)
+      self.scrollView.scrollToIndex(currentSlot, animated: true)
       ++counter
       if(counter == PropertyListHelper.sharedInstance.getTotalItem()){
         gameOver = true
@@ -136,15 +136,14 @@ class ViewController: UIViewController {
       isSpinning = true
       self.mLeverAudioPlayer.playSound()
       self.mSlotRunAudioPlayer.playSound()
-//      self.runSlot()
-      let timer = NSTimer.scheduledTimerWithTimeInterval(0.12, target: self, selector: Selector("runSlot"), userInfo: nil, repeats: true)
-      let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(6 * Double(NSEC_PER_SEC)))
+      let timer = NSTimer.scheduledTimerWithTimeInterval(0.15, target: self, selector: Selector("runSlot"), userInfo: nil, repeats: true)
+      let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(3 * Double(NSEC_PER_SEC)))
       dispatch_after(delayTime, dispatch_get_main_queue()) {
-        self.isSpinning = false
         timer.invalidate()
+        self.setRow(self.currentSlot)
+        self.isSpinning = false
         self.mSlotRunAudioPlayer.stop()
         self.mEndAudioPlayer.playSound()
-        self.setRow(self.currentSlot)
       }
     }
   }
