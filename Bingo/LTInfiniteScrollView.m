@@ -65,7 +65,7 @@
     self.scrollView.showsHorizontalScrollIndicator = NO;
     self.scrollView.showsVerticalScrollIndicator = NO;
     self.scrollView.delegate = self;
-    self.scrollView.clipsToBounds = TRUE;
+    self.scrollView.clipsToBounds = NO;
     self.scrollView.pagingEnabled = self.pagingEnabled;
     [self addSubview:self.scrollView];
 }
@@ -120,6 +120,7 @@
     } else {
         self.scrollDirection = ScrollDirectionNext;
     }
+
     [self.scrollView setContentOffset:[self contentOffsetForIndex:index] animated:animated];
 }
 
